@@ -1,0 +1,22 @@
+GWEN ▶ RePLAY™ PS5
+Copyright (C) 2026 Tenten1824
+Original author and developer: Tenten1824
+https://github.com/Tenten1824/GWEN-RePLAY-PS5
+
+GWEN ▶ RePLAY™ PS5 is inspired by
+GWEN™ — Gaming World Entertainment Network.
+
+Developed by Tenten1824 with development assistance from OpenAI Codex.
+Product direction, visual identity, custom interface and application
+integration: Tenten1824.
+
+If you redistribute or modify this work, preserve its original copyright,
+author attribution, license and applicable third-party notices, and clearly
+identify your changes as required by the GNU GPL version 3 or later.
+Keep CREDITS.txt and LICENSE with redistributions of this project.
+
+Please credit the original project as:
+"GWEN ▶ RePLAY™ PS5 by Tenten1824"
+
+This notice does not add restrictions beyond the project's GPL-3.0-or-later
+license. Third-party components retain their own ownership and licenses.

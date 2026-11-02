@@ -1,0 +1,47 @@
+{
+  "product": "GWEN \u25b6 RePLAY\u2122 PS5",
+  "version": "0.9.0",
+  "firmware": "",
+  "firmware_verified": [
+    "7.01",
+    "10.01",
+    "13.20",
+    "13.60"
+  ],
+  "author": "tenten1824",
+  "developer": "tenten1824",
+  "stable": true,
+  "status": "Hardware verification passed on all four supported firmwares",
+  "payload_file": "GWEN \u25b6 RePLAY\u2122 PS5.elf",
+  "pc_launcher": "GWEN \u25b6 RePLAY\u2122 PS5.exe",
+  "loader_port": 9021,
+  "cloud_port": 8787,
+  "cloud_multi_console": true,
+  "cloud_library": "One shared library for all PS5s on this PC",
+  "shortcuts": {
+    "video": "L2 + Options/Start",
+    "screenshot": "R2 + Select/Create",
+    "audio": "PC only"
+  },
+  "files": {
+    "GWEN \u25b6 RePLAY\u2122 PS5.elf": {
+      "bytes": 287352,
+      "sha256": "3e290ba158f06f8048c312d6b3e2e415f2118ccb9c74de0decb2ccd1037539ea"
+    },
+    "honcho-stop.elf": {
+      "bytes": 110280,
+      "sha256": "480d8cc4a53960c3bb58bc16c9cbf7af2dc9eb66167d0f2bdac108ddffa9fca7"
+    },
+    "GWEN \u25b6 RePLAY\u2122 PS5.exe": {
+      "bytes": 201216,
+      "sha256": "25f9338a43cd67f769eb722debd1caf558ac7252ac753e7f876a09a8903375aa"
+    }
+  },
+  "packaging_held": false,
+  "duplicate_load_protection": "Entry lock acquired before ShellUI access and held through full cleanup",
+  "stable_scope": "Hardware-verified recording, screenshots, physical shortcuts, audio export, automatic local uploads and clean shutdown on 7.01, 10.01, 13.20 Pro and 13.60",
+  "remote_play_shortcuts_verified": false,
+  "long_duration_soak_test_performed": false,
+  "distribution": "Public ZIP with installer and source; portable EXE is developer-only",
+  "installer": "GWEN-RePLAY-PS5-Setup.exe"
+}

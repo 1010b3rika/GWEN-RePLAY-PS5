@@ -1,0 +1,76 @@
+{
+  "product": "GWEN \u25b6 RePLAY\u2122 PS5",
+  "version": "0.9.0",
+  "author": "tenten1824",
+  "developer": "tenten1824",
+  "elf_sha256": "3e290ba158f06f8048c312d6b3e2e415f2118ccb9c74de0decb2ccd1037539ea",
+  "supported": {
+    "7.01": {
+      "fresh_video": true,
+      "screenshot": true,
+      "video_and_image_full_decode": true,
+      "physical_shortcuts": true,
+      "audio_export": true,
+      "audio_full_decode": true,
+      "automatic_uploads": true,
+      "download_checksums": true,
+      "duplicate_guard": true,
+      "idle_shutdown": true,
+      "reload_same_shellui": true,
+      "current_boot_ps5_files_retained": true
+    },
+    "10.01": {
+      "fresh_video": true,
+      "screenshot": true,
+      "video_and_image_full_decode": true,
+      "physical_shortcuts": true,
+      "audio_export": true,
+      "audio_full_decode": true,
+      "automatic_uploads": true,
+      "download_checksums": true,
+      "duplicate_guard": true,
+      "idle_shutdown": true,
+      "reload_same_shellui": true,
+      "current_boot_ps5_files_retained": true
+    },
+    "13.20": {
+      "fresh_video": true,
+      "screenshot": true,
+      "video_and_image_full_decode": true,
+      "physical_shortcuts": true,
+      "audio_export": true,
+      "audio_full_decode": true,
+      "automatic_uploads": true,
+      "download_checksums": true,
+      "duplicate_guard": true,
+      "idle_shutdown": true,
+      "reload_same_shellui": true,
+      "current_boot_ps5_files_retained": true
+    },
+    "13.60": {
+      "fresh_video": true,
+      "screenshot": true,
+      "video_and_image_full_decode": true,
+      "physical_shortcuts": true,
+      "audio_export": true,
+      "audio_full_decode": true,
+      "automatic_uploads": true,
+      "download_checksums": true,
+      "duplicate_guard": true,
+      "idle_shutdown": true,
+      "reload_same_shellui": true,
+      "current_boot_ps5_files_retained": true
+    }
+  },
+  "original_10_01_preserved": true,
+  "mono_exports_verified_per_profile": 36,
+  "bridge": "Owned-firmware managed Create service metadata and live native fingerprints; firmware-specific verified ABIs",
+  "lifetime_fix": "Attach Mono only for managed transactions, detach using fresh public mono_thread_current; native polling stays unattached; entry lock covers initialization through cleanup",
+  "gc_checks": "Three managed full collections and clean teardown verified separately on each firmware",
+  "limits": [
+    "Remote Play input and multi-hour soak not verified",
+    "Normal Options/Create actions still reach games and system",
+    "Sony can clean temporary PS5 screenshot files; verified PC copies are retained",
+    "Sony per-video duration and blocked-scene restrictions apply"
+  ]
+}

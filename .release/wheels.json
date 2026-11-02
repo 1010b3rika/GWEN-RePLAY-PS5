@@ -1,0 +1,146 @@
+[
+  {
+    "filename": "argon2_cffi-25.1.0-py3-none-any.whl",
+    "project": "argon2-cffi",
+    "version": "25.1.0",
+    "sha256": "fdc8b074db390fccb6eb4a3604ae7231f219aa669a2652e0f20e16ba513d5741"
+  },
+  {
+    "filename": "argon2_cffi_bindings-26.1.0-cp310-abi3-win_amd64.whl",
+    "project": "argon2-cffi-bindings",
+    "version": "26.1.0",
+    "sha256": "2c36ff87b5dfaa477d0bd51e9d7f6abdae7c8955d2983c97419085d842154b3e"
+  },
+  {
+    "filename": "blinker-1.9.0-py3-none-any.whl",
+    "project": "blinker",
+    "version": "1.9.0",
+    "sha256": "ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc"
+  },
+  {
+    "filename": "boto3-1.43.123-py3-none-any.whl",
+    "project": "boto3",
+    "version": "1.43.123",
+    "sha256": "d18d66e1e13faa0c25d0b1b8c5ce946e29fb5fc0b6456b655a93a678ff4cc313"
+  },
+  {
+    "filename": "botocore-1.43.123-py3-none-any.whl",
+    "project": "botocore",
+    "version": "1.43.123",
+    "sha256": "e30580f9c1282c321529238ff8ff75066096a2adbd0a293c8ae592c21d1733a3"
+  },
+  {
+    "filename": "certifi-2026.10.23-py3-none-any.whl",
+    "project": "certifi",
+    "version": "2026.10.23",
+    "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1"
+  },
+  {
+    "filename": "cffi-2.1.1-cp312-cp312-win_amd64.whl",
+    "project": "cffi",
+    "version": "2.1.1",
+    "sha256": "f53e442b08449d42821fa4a4fba000095af9f62742a500f978a9f557ec44339a"
+  },
+  {
+    "filename": "charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl",
+    "project": "charset-normalizer",
+    "version": "3.5.2",
+    "sha256": "780fbe7cab297b81dad9fb8dc5eb003c0468ffb0d9e5f65068c53a34661a96bc"
+  },
+  {
+    "filename": "click-8.5.0-py3-none-any.whl",
+    "project": "click",
+    "version": "8.5.0",
+    "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+  },
+  {
+    "filename": "flask-3.1.3-py3-none-any.whl",
+    "project": "flask",
+    "version": "3.1.3",
+    "sha256": "f4bcbefc124291925f1a26446da31a5178f9483862233b23c0c96a20701f670c"
+  },
+  {
+    "filename": "idna-3.20-py3-none-any.whl",
+    "project": "idna",
+    "version": "3.20",
+    "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+  },
+  {
+    "filename": "imageio_ffmpeg-0.6.0-py3-none-win_amd64.whl",
+    "project": "imageio-ffmpeg",
+    "version": "0.6.0",
+    "sha256": "02fa47c83703c37df6bfe4896aab339013f62bf02c5ebf2dce6da56af04ffc0a"
+  },
+  {
+    "filename": "itsdangerous-2.2.0-py3-none-any.whl",
+    "project": "itsdangerous",
+    "version": "2.2.0",
+    "sha256": "c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef"
+  },
+  {
+    "filename": "jinja2-3.1.6-py3-none-any.whl",
+    "project": "jinja2",
+    "version": "3.1.6",
+    "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+  },
+  {
+    "filename": "jmespath-1.1.0-py3-none-any.whl",
+    "project": "jmespath",
+    "version": "1.1.0",
+    "sha256": "a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64"
+  },
+  {
+    "filename": "markupsafe-3.0.4-cp312-cp312-win_amd64.whl",
+    "project": "markupsafe",
+    "version": "3.0.4",
+    "sha256": "11935df9bf455ed0c04eb87bcd720f02b1fe5e02128a9430f23aed6f93336fc7"
+  },
+  {
+    "filename": "pycparser-3.12-py3-none-any.whl",
+    "project": "pycparser",
+    "version": "3.12",
+    "sha256": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e"
+  },
+  {
+    "filename": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+    "project": "python-dateutil",
+    "version": "2.9.0.post0",
+    "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+  },
+  {
+    "filename": "requests-2.34.2-py3-none-any.whl",
+    "project": "requests",
+    "version": "2.34.2",
+    "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+  },
+  {
+    "filename": "s3transfer-0.19.3-py3-none-any.whl",
+    "project": "s3transfer",
+    "version": "0.19.3",
+    "sha256": "24eb7535804306355e31c952a90022bf5b2f9d760f9a11062c7493a217c08553"
+  },
+  {
+    "filename": "six-1.17.0-py2.py3-none-any.whl",
+    "project": "six",
+    "version": "1.17.0",
+    "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+  },
+  {
+    "filename": "urllib3-2.8.0-py3-none-any.whl",
+    "project": "urllib3",
+    "version": "2.8.0",
+    "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+  },
+  {
+    "filename": "waitress-3.0.2-py3-none-any.whl",
+    "project": "waitress",
+    "version": "3.0.2",
+    "sha256": "c56d67fd6e87c2ee598b76abdd4e96cfad1f24cacdea5078d382b1f9d7b5ed2e"
+  },
+  {
+    "filename": "werkzeug-3.1.9-py3-none-any.whl",
+    "project": "werkzeug",
+    "version": "3.1.9",
+    "sha256": "6392e50c78460ba618e5b21f08a71f59c99ce99cdc6cf6e3dd7e6ccca8754fab"
+  }
+]

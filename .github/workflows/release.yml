@@ -1,0 +1,28 @@
+name: Publish GWEN RePLAY PS5
+on:
+  push:
+    branches: [main]
+    paths: ['.release/**', '.github/workflows/release.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: gwen-release-v090
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Verify, assemble and publish the supported-firmware release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PYTHONUTF8: '1'
+        run: python .release/publish-release.py

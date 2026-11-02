@@ -1,0 +1,67 @@
+{
+  "bytes": 5433433,
+  "sha256": "85c50686610e45566655a78302ca329038bd07fdff078a1d41dbcc1a9bc33725",
+  "parts": [
+    {
+      "path": "part-00.bin",
+      "bytes": 524288,
+      "sha256": "0296a9dcbe170bbb994f99a3fe12e68fda34ed15b4deb87b8bae792ccbcb12ad"
+    },
+    {
+      "path": "part-01a.bin",
+      "bytes": 262144,
+      "sha256": "bd655e0d0acb00fcefcefee98cafe5349f666d86889a3a35e4c76ffd4cff54be"
+    },
+    {
+      "path": "part-01b.bin",
+      "bytes": 262144,
+      "sha256": "310cc274dd52ca9ba5c0a69b6fc2a365c2d68b6bff1251298693b703ff7b036d"
+    },
+    {
+      "path": "part-02.bin",
+      "bytes": 524288,
+      "sha256": "0608442b9cd992fb42b036efa77fcf1f44c5ba00a2df59fe2708efad8f6639c0"
+    },
+    {
+      "path": "part-03.bin",
+      "bytes": 524288,
+      "sha256": "77faeed7aa1675bf0a720ec03448cc0f50f01b254e34fc6d8add888ea9846c1b"
+    },
+    {
+      "path": "part-04.bin",
+      "bytes": 524288,
+      "sha256": "ff99e519eb71b5bc4384bb5a62ea19ec516adcf8a0502ac123d4c0a27a779508"
+    },
+    {
+      "path": "part-05.bin",
+      "bytes": 524288,
+      "sha256": "184e4e385622f92c3bc8bd967eb11ecc2f8d7cda4f7129983c459ef4ef3cf0a2"
+    },
+    {
+      "path": "part-06.bin",
+      "bytes": 524288,
+      "sha256": "ff6bd838124baab01e19044bd0043b9501c14938c990b08bba9160ae5f8b41c4"
+    },
+    {
+      "path": "part-07.bin",
+      "bytes": 524288,
+      "sha256": "f454405aaecdc58850f11d87d3d5fd69ba88d84ade92c2f7cc98347d19acd2ae"
+    },
+    {
+      "path": "part-08.bin",
+      "bytes": 524288,
+      "sha256": "399a7d77794fa47d590198c00a975da4d591a5a6ca637f7344bb3771557dffd2"
+    },
+    {
+      "path": "part-09.bin",
+      "bytes": 524288,
+      "sha256": "4a85076a67a45ce199698bb850e19535874208fe05226dcb6d35ef86253e6dc5"
+    },
+    {
+      "path": "part-10.bin",
+      "bytes": 190553,
+      "sha256": "8b08a9a533cfa3acb49d81a839864aab5746a0897621fa1cda8345fb90cb8d9a"
+    }
+  ],
+  "elf_sha256": "3e290ba158f06f8048c312d6b3e2e415f2118ccb9c74de0decb2ccd1037539ea"
+}

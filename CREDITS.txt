@@ -1,0 +1,31 @@
+GWEN ▶ RePLAY™ PS5
+Version 0.9.0
+
+Author: tenten1824
+Developer: tenten1824
+Project: https://github.com/Tenten1824/GWEN-RePLAY-PS5
+
+GWEN™ — Credits & acknowledgements
+
+GWEN ▶ RePLAY™ PS5 is inspired by
+GWEN™ — Gaming World Entertainment Network.
+
+GWEN™ is an independent gaming and entertainment project inspired by Gwen.
+Upstream protocol engines and
+libraries are credited below.
+
+GWEN™ development
+
+Developed by Tenten1824 with development assistance from OpenAI Codex.
+Product direction, visual identity, custom interface and application
+integration: Tenten1824.
+
+Supported PS5 firmware: 7.01, 10.01, 13.20 Pro and 13.60.
+Project source is provided under GPL-3.0-or-later; see LICENSE.
+
+This project uses the public PS5 payload SDK and the Mono embedding API.
+The PC service uses Python, Flask, Waitress, requests and imageio-ffmpeg,
+with their dependencies. Third-party components retain their respective
+licenses and credits in the bundled wheel distributions.
+
+No Sony firmware binaries, jailbreak or personal captures are distributed.

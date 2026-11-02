@@ -17,10 +17,9 @@ Native PS5 gameplay recording, screenshots and controller shortcuts, with a Wind
 
 ## Download
 
-Get the **full package ZIP** or **portable EXE** from [Releases](https://github.com/Tenten1824/GWEN-RePLAY-PS5/releases).
+Get the **full package ZIP** from [Releases](https://github.com/Tenten1824/GWEN-RePLAY-PS5/releases).
 
-- Full package: extract the entire ZIP and open **GWEN ▶ RePLAY™ PS5.exe**.
-- Portable: open **GWEN-Replay-PS5-v0.9.0-Portable.exe**. It extracts its included files beside itself.
+- Full package: extract the ZIP and run **GWEN-RePLAY-PS5-Setup.exe**, then open **GWEN ▶ RePLAY™ PS5** from Start. The installer adds shortcuts and supports uninstalling through Windows Apps.
 - ELF only: **GWEN ▶ RePLAY™ PS5.elf** is the same firmware-detecting payload for all four supported versions. Use the PC package for automatic copying and audio export.
 - Source: **Source.zip** includes the native recorder, Windows launcher and Cloud service.
 
@@ -29,7 +28,7 @@ Get the **full package ZIP** or **portable EXE** from [Releases](https://github.
 You need a Windows PC with **Python 3.12 x64**, and a supported PS5 with a working **ELF loader on port 9021** and **FTP on port 2121**. Dependency and FFmpeg wheels are bundled; the Python interpreter and jailbreak are not included.
 
 1. Start your PS5's loader and FTP, then open your game. Put the PC and PS5 on the same private network.
-2. Open the GWEN Windows app and enter **your PS5's IP address**.
+2. Run the installer from the ZIP, open GWEN from Start, and enter **your PS5's IP address**.
 3. Click **Video**, **Screenshot**, or **Game audio**. GWEN loads its included ELF when needed. Click Video or Game audio again to stop and save.
 
 After a PS5 restart, start its loader/FTP and use the app again. Load one recorder instance per console; duplicate loading is blocked. The monitor has no four-hour cutoff. Sony's per-video duration limits still apply.
@@ -64,5 +63,8 @@ If setup fails, see **CLOUD-SETUP.log** and **CLOUD-START.log** next to the app.
 
 ## Credits and license
 
-Created and developed by **tenten1824**. See **CREDITS.txt** and the **GPL-3.0-or-later LICENSE**. Third-party components retain their own licenses. No private Sony firmware binaries, personal captures, saved console registry or credentials are included.
+**GWEN ▶ RePLAY™ PS5** is inspired by **GWEN™ — Gaming World Entertainment Network**. GWEN™ is an independent gaming and entertainment project inspired by Gwen.
 
+Developed by **Tenten1824** with development assistance from **OpenAI Codex**. Product direction, visual identity, custom interface and application integration: **Tenten1824**.
+
+See **CREDITS.txt**, **NOTICE.txt**, and the **GPL-3.0-or-later LICENSE**. Preserve the original author and license notices when redistributing or modifying the project. Third-party components retain their own licenses. No private Sony firmware binaries, personal captures, saved console registry or credentials are included. The portable EXE is reserved for developer builds and is not distributed in public releases.

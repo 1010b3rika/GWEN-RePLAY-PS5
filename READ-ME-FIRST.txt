@@ -1,0 +1,46 @@
+GWEN ▶ RePLAY™ PS5 — v0.9.0 — developed by tenten1824
+
+1. Extract the ZIP, run GWEN-RePLAY-PS5-Setup.exe, and open GWEN from Start.
+2. Enter your PS5 IP. Keep its ELF loader and FTP running, with a game open.
+3. Click Video, Screenshot or Game audio. The app loads the one included ELF
+   automatically when needed. Video/audio tiles toggle start/stop and save.
+
+Controller: L2 + Options/Start = video start/stop.
+Controller: R2 + Create/Select = screenshot. Audio-only is triggered on PC.
+Options/Create still reach the game/system, so close a pause/Create menu with
+triggers released. Games may show their normal pause menu when Options is pressed.
+
+ONE ELF: GWEN ▶ RePLAY™ PS5.elf detects 7.01, 10.01, 13.20 and 13.60.
+Other firmware is rejected. Exact system-library fingerprints are checked before
+capture calls. Earlier 7.01 and 10.01 release folders remain separate backups.
+After each PS5 restart, enable its loader/FTP and click a PC capture tile again.
+There is no four-hour worker cutoff. Sony's native per-recording limits remain.
+
+ONE CLOUD: http://127.0.0.1:8787 on this PC.
+All PS5s share the same library, with automatic console sections and a firmware
+filter. Original capture firmware labels are retained after a console upgrade.
+The combined ELF reports detected firmware so new console sections need no profile.
+
+Video/screenshots first save on PS5, then copy automatically while this PC and
+PS5 FTP are available. The recorder never deletes PS5 media. Sony may clean temporary screenshot files;
+verified PC originals remain in your library. No password or account required.
+Audio-only exports AAC/M4A on PC and queues it for the same library; its underlying
+source video remains on PS5. Video and audio share one native recording session.
+The 100 GiB quota uses this PC's existing disk space; it is not free online storage.
+
+The library is shared across release folders through Windows local app-data,
+GWEN RePLAY PS5/Library. This PC's earlier libraries have been preserved.
+Use the Library tile to open the same service. No visible PowerShell window.
+Python 3.12 x64 is required; offline dependencies and FFmpeg wheels are included.
+If setup fails, check CLOUD-START.log / CLOUD-SETUP.log.
+
+Payload Manager logo: Cloud/install_payload_icon.py installs the bundled combined
+ELF and cached logo without launching a duplicate recorder. Its read-only catalog
+uses 8790; personal media remains accessible only on localhost:8787.
+No private Sony firmware binaries or personal recordings are included in this ZIP.
+
+Hardware scope and exact evidence: GWEN-VERIFICATION.json.
+Remote Play controller input and a multi-hour soak are not verified.
+
+Reuse and attribution: preserve the original author and license notices.
+See NOTICE.txt and CREDITS.txt. Portable EXE is developer-only, not public.
