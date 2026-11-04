@@ -99,5 +99,11 @@ if not a.no_publish:
     existing=subprocess.run(['gh','release','view','v0.9.2','--repo',repo],capture_output=True)
     if existing.returncode:
         subprocess.run(['gh','release','create','v0.9.2','--repo',repo,'--target',target,'--title',release_title,'--notes-file',str(package/'RELEASE-NOTES.md'),'--draft'],check=True)
-    subprocess.run(['gh','release','upload','v0.9.2',*[str(f) for f in files],'--repo',repo,'--clobber'],check=True)
+    # Sequential uploads and bounded retries tolerate GitHub asset-replacement 5xx errors.
+    for asset in files:
+        for attempt in range(4):
+            upload=subprocess.run(['gh','release','upload','v0.9.2',str(asset),'--repo',repo,'--clobber'])
+            if upload.returncode==0:break
+            if attempt==3:upload.check_returncode()
+            time.sleep(2**attempt)
     subprocess.run(['gh','release','edit','v0.9.2','--repo',repo,'--title',release_title,'--notes-file',str(package/'RELEASE-NOTES.md'),'--latest','--draft=false'],check=True)
