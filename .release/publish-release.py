@@ -22,6 +22,13 @@ docs=a.docs_root or w.parent
 credit.refresh(package,docs)
 for name in ('README.md','CREDITS.txt','RELEASE-NOTES.md','release.json','NOTICE.txt','READ-ME-FIRST.txt'):
     if (docs/name).is_file():shutil.copy2(docs/name,package/name)
+# Fail publication if product text has been decoded through a legacy code page.
+expected_brand='GWEN \u25b6 RePLAY\u2122 PS5'
+for document in ['README.md','RELEASE-NOTES.md','READ-ME-FIRST.txt']:
+    text=(package/document).read_text(encoding='utf-8-sig')
+    assert expected_brand in text,document
+    assert '\u00e2\u2013' not in text and '\u00e2\u201e' not in text,document
+assert 'AppName='+expected_brand in (w/'installer.iss').read_text(encoding='utf-8-sig')
 # Include current acknowledgements in the source download as well.
 source_archive=package/'Source.zip';pending=package/'Source.updated.zip'
 with zipfile.ZipFile(source_archive) as old,zipfile.ZipFile(pending,'w',zipfile.ZIP_DEFLATED) as new:
@@ -88,8 +95,9 @@ print('Validated release assets:',', '.join(f.name for f in files),flush=True)
 if not a.no_publish:
     target=os.environ['GITHUB_SHA'];repo=os.environ['GITHUB_REPOSITORY']
     assert repo.lower()=='1010b3rika/gwen-replay-ps5'
+    release_title='GWEN \u25b6 RePLAY\u2122 PS5 v0.9.2 - 1010B3rika'
     existing=subprocess.run(['gh','release','view','v0.9.2','--repo',repo],capture_output=True)
     if existing.returncode:
-        subprocess.run(['gh','release','create','v0.9.2','--repo',repo,'--target',target,'--title','GWEN RePLAY PS5 v0.9.2 - 1010B3rika','--notes-file',str(package/'RELEASE-NOTES.md'),'--draft'],check=True)
+        subprocess.run(['gh','release','create','v0.9.2','--repo',repo,'--target',target,'--title',release_title,'--notes-file',str(package/'RELEASE-NOTES.md'),'--draft'],check=True)
     subprocess.run(['gh','release','upload','v0.9.2',*[str(f) for f in files],'--repo',repo,'--clobber'],check=True)
-    subprocess.run(['gh','release','edit','v0.9.2','--repo',repo,'--title','GWEN RePLAY PS5 v0.9.2 - 1010B3rika','--notes-file',str(package/'RELEASE-NOTES.md'),'--latest','--draft=false'],check=True)
+    subprocess.run(['gh','release','edit','v0.9.2','--repo',repo,'--title',release_title,'--notes-file',str(package/'RELEASE-NOTES.md'),'--latest','--draft=false'],check=True)
