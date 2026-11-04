@@ -1,8 +1,8 @@
 # GWEN ▶ RePLAY™ PS5 v0.9.0
 
-**Author and developer: tenten1824**
+**Author and developer: 1010B3rika**
 
-**GWEN ▶ RePLAY™ PS5** is inspired by **GWEN™ — Gaming World Entertainment Network**. GWEN™ is an independent gaming and entertainment project inspired by Gwen. Developed by **Tenten1824** with development assistance from **OpenAI Codex**. Product direction, visual identity, custom interface and application integration: **Tenten1824**.
+**GWEN ▶ RePLAY™ PS5** is inspired by **GWEN™ — Gaming World Entertainment Network**. GWEN™ is an independent gaming and entertainment project inspired by Gwen. Developed by **1010B3rika** with development assistance from **OpenAI Codex**. Product direction, visual identity, custom interface and application integration: **1010B3rika**.
 
 One firmware-detecting ELF for PS5 **7.01, 10.01, 13.20 Pro and 13.60** only.
 One shared local Cloud library at **http://127.0.0.1:8787** on your Windows PC.
@@ -26,3 +26,7 @@ The package includes compiled ELF and Windows GUI applications, source code and 
 The portable EXE is reserved for developer builds and is excluded from this public release.
 
 The ZIP includes the installer and open source. Preserve original author attribution and license notices when redistributing or modifying; see NOTICE.txt.
+
+
+
+Developer attribution refresh: **1010B3rika**. ELF and Windows launcher rebuilt for the name change only. Firmware worker files are unchanged; the renamed ELF has not been hardware-retested. Earlier functional verification applies to the original binary, retained in the saved restore point.

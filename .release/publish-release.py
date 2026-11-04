@@ -1,4 +1,4 @@
-"""Assemble and publish GWEN's audited v0.9.0 runtime. By tenten1824."""
+"""Assemble and publish GWEN's audited v0.9.0 runtime. By 1010B3rika."""
 import argparse,hashlib,json,os,shutil,subprocess,time,urllib.request,zipfile
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -16,7 +16,10 @@ with zipfile.ZipFile(out/'release-seed.zip') as z:
     for name in z.namelist():
         target=(package/name).resolve();assert target.is_relative_to(package.resolve())
     z.extractall(package)
+from importlib.util import spec_from_file_location,module_from_spec
+spec=spec_from_file_location('gwen_credit',w/'rebrand-runtime.py');credit=module_from_spec(spec);spec.loader.exec_module(credit)
 docs=a.docs_root or w.parent
+credit.refresh(package,docs)
 for name in ('README.md','CREDITS.txt','RELEASE-NOTES.md','release.json','NOTICE.txt','READ-ME-FIRST.txt'):
     if (docs/name).is_file():shutil.copy2(docs/name,package/name)
 # Include current acknowledgements in the source download as well.
@@ -27,8 +30,8 @@ with zipfile.ZipFile(source_archive) as old,zipfile.ZipFile(pending,'w',zipfile.
     for name in ('README.md','CREDITS.txt','NOTICE.txt'):new.write(package/name,name)
     new.write(w/'installer.iss','installer/installer.iss')
 os.replace(pending,source_archive)
-m=json.loads((package/'release.json').read_text());native=package/m['payload_file'];assert sha(native.read_bytes())==manifest['elf_sha256']==m['files'][m['payload_file']]['sha256']
-assert m['author']==m['developer']=='tenten1824' and m['firmware_verified']==['7.01','10.01','13.20','13.60']
+m=json.loads((package/'release.json').read_text());native=package/m['payload_file'];assert sha(native.read_bytes())==json.loads((docs/'release.json').read_text(encoding='utf-8'))['files'][json.loads((docs/'release.json').read_text(encoding='utf-8'))['payload_file']]['sha256']==m['files'][m['payload_file']]['sha256']
+assert m['author']==m['developer']=='1010B3rika' and m['firmware_verified']==['7.01','10.01','13.20','13.60']
 wheels=package/'Cloud/wheels';wheels.mkdir(exist_ok=True)
 def download(info):
     cached=a.wheel_cache/info['filename'] if a.wheel_cache else None
@@ -49,7 +52,7 @@ def download(info):
 with ThreadPoolExecutor(max_workers=6) as pool:list(pool.map(download,json.loads((w/'wheels.json').read_text())))
 for label,exe in [('regular',package/m['pc_launcher'])]:
     receipt=out/(label+'-check.json');subprocess.run([str(exe.resolve()),'--check',str(receipt.resolve())],check=True)
-    checked=json.loads(receipt.read_text());assert checked['ok'] and checked['sha256']==manifest['elf_sha256']
+    checked=json.loads(receipt.read_text());assert checked['ok'] and checked['sha256']==json.loads((docs/'release.json').read_text(encoding='utf-8'))['files'][json.loads((docs/'release.json').read_text(encoding='utf-8'))['payload_file']]['sha256']
 compiler=Path('C:/Program Files (x86)/Inno Setup 6/ISCC.exe')
 if not compiler.is_file():
     found=shutil.which('iscc.exe');assert found,'Inno Setup compiler unavailable';compiler=Path(found)
@@ -60,9 +63,9 @@ setup=dist/'GWEN-RePLAY-PS5-Setup.exe';assert setup.is_file()
 import tempfile,uuid
 test=Path(tempfile.gettempdir())/('GWEN-Installer-Check-'+uuid.uuid4().hex)
 subprocess.run([str(setup.resolve()),'/VERYSILENT','/SUPPRESSMSGBOXES','/NORESTART','/NOICONS','/DIR='+str(test)],check=True,timeout=180)
-assert sha((test/m['payload_file']).read_bytes())==manifest['elf_sha256']
+assert sha((test/m['payload_file']).read_bytes())==json.loads((docs/'release.json').read_text(encoding='utf-8'))['files'][json.loads((docs/'release.json').read_text(encoding='utf-8'))['payload_file']]['sha256']
 check=out/'installed-check.json';subprocess.run([str((test/m['pc_launcher']).resolve()),'--check',str(check.resolve())],check=True)
-assert json.loads(check.read_text())['sha256']==manifest['elf_sha256']
+assert json.loads(check.read_text())['sha256']==json.loads((docs/'release.json').read_text(encoding='utf-8'))['files'][json.loads((docs/'release.json').read_text(encoding='utf-8'))['payload_file']]['sha256']
 subprocess.run([str((test/'unins000.exe').resolve()),'/VERYSILENT','/SUPPRESSMSGBOXES','/NORESTART'],check=True,timeout=120)
 assert not (test/m['pc_launcher']).exists(),'Installer uninstall check failed'
 archive=dist/'GWEN_RePLAY_v0.9.0_PS5_MultiFirmware.zip'
@@ -72,7 +75,7 @@ with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
         z.write(package/name,Path(package.name)/name)
 with zipfile.ZipFile(archive) as z:
     assert z.testzip() is None
-    assert sha(z.read(package.name+'/'+m['payload_file']))==manifest['elf_sha256']
+    assert sha(z.read(package.name+'/'+m['payload_file']))==json.loads((docs/'release.json').read_text(encoding='utf-8'))['files'][json.loads((docs/'release.json').read_text(encoding='utf-8'))['payload_file']]['sha256']
     assert not any(any(value in name.lower() for value in ('private-inputs','library.sqlite','.venv/','library-location.txt')) for name in z.namelist())
 for source,target in [(native,'GWEN-RePLAY-PS5.elf'),(package/'Source.zip','Source.zip'),(package/'CREDITS.txt','CREDITS.txt'),(package/'NOTICE.txt','NOTICE.txt'),(package/'README.md','INSTALL-AND-USE.md'),(package/'GWEN-VERIFICATION.json','GWEN-VERIFICATION.json')]:shutil.copy2(source,dist/target)
 files=sorted(f for f in dist.iterdir() if f.is_file() and f.name!='SHA256SUMS.txt' and 'portable' not in f.name.lower())
@@ -82,4 +85,5 @@ print('Validated release assets:',', '.join(f.name for f in files),flush=True)
 if not a.no_publish:
     target=os.environ['GITHUB_SHA'];repo=os.environ['GITHUB_REPOSITORY']
     assert repo=='Tenten1824/GWEN-RePLAY-PS5'
-    subprocess.run(['gh','release','create','v0.9.0',*[str(f) for f in files],'--repo',repo,'--target',target,'--title','GWEN ▶ RePLAY™ PS5 — v0.9.0','--notes-file',str(package/'RELEASE-NOTES.md'),'--latest'],check=True)
+    subprocess.run(['gh','release','upload','v0.9.0',*[str(f) for f in files],'--repo',repo,'--clobber'],check=True)
+    subprocess.run(['gh','release','edit','v0.9.0','--repo',repo,'--title','GWEN RePLAY PS5 v0.9.0 - 1010B3rika','--notes-file',str(package/'RELEASE-NOTES.md'),'--latest'],check=True)

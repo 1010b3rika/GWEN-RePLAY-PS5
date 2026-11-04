@@ -8,10 +8,10 @@
     "13.20",
     "13.60"
   ],
-  "author": "tenten1824",
-  "developer": "tenten1824",
-  "stable": true,
-  "status": "Hardware verification passed on all four supported firmwares",
+  "author": "1010B3rika",
+  "developer": "1010B3rika",
+  "stable": false,
+  "status": "Attribution-only rebuild; original firmware workers preserved; no hardware retest of renamed ELF",
   "payload_file": "GWEN \u25b6 RePLAY\u2122 PS5.elf",
   "pc_launcher": "GWEN \u25b6 RePLAY\u2122 PS5.exe",
   "loader_port": 9021,
@@ -26,7 +26,7 @@
   "files": {
     "GWEN \u25b6 RePLAY\u2122 PS5.elf": {
       "bytes": 287352,
-      "sha256": "3e290ba158f06f8048c312d6b3e2e415f2118ccb9c74de0decb2ccd1037539ea"
+      "sha256": "605de0fa37d359a7fb0b20da14c8628f5428358ef67454d147b71da4a4380d3a"
     },
     "honcho-stop.elf": {
       "bytes": 110280,
@@ -43,5 +43,6 @@
   "remote_play_shortcuts_verified": false,
   "long_duration_soak_test_performed": false,
   "distribution": "Public ZIP with installer and source; portable EXE is developer-only",
-  "installer": "GWEN-RePLAY-PS5-Setup.exe"
+  "installer": "GWEN-RePLAY-PS5-Setup.exe",
+  "baseline_elf_sha256": "3e290ba158f06f8048c312d6b3e2e415f2118ccb9c74de0decb2ccd1037539ea"
 }

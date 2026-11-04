@@ -1,6 +1,6 @@
 # GWEN ▶ RePLAY™ PS5
 
-**Author and developer: tenten1824** · Version **0.9.0**
+**Author and developer: 1010B3rika** · Version **0.9.0**
 
 Native PS5 gameplay recording, screenshots and controller shortcuts, with a Windows capture app and one shared local media library.
 
@@ -65,6 +65,10 @@ If setup fails, see **CLOUD-SETUP.log** and **CLOUD-START.log** next to the app.
 
 **GWEN ▶ RePLAY™ PS5** is inspired by **GWEN™ — Gaming World Entertainment Network**. GWEN™ is an independent gaming and entertainment project inspired by Gwen.
 
-Developed by **Tenten1824** with development assistance from **OpenAI Codex**. Product direction, visual identity, custom interface and application integration: **Tenten1824**.
+Developed by **1010B3rika** with development assistance from **OpenAI Codex**. Product direction, visual identity, custom interface and application integration: **1010B3rika**.
 
 See **CREDITS.txt**, **NOTICE.txt**, and the **GPL-3.0-or-later LICENSE**. Preserve the original author and license notices when redistributing or modifying the project. Third-party components retain their own licenses. No private Sony firmware binaries, personal captures, saved console registry or credentials are included. The portable EXE is reserved for developer builds and is not distributed in public releases.
+
+
+
+Developer attribution refresh: **1010B3rika**. ELF and Windows launcher rebuilt for the name change only. Firmware worker files are unchanged; the renamed ELF has not been hardware-retested. Earlier functional verification applies to the original binary, retained in the saved restore point.

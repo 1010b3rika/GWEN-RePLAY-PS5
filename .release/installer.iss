@@ -8,10 +8,10 @@
 AppId={{AD52D0DE-F8C4-4E6D-8AD9-4CB8401DCB81}
 AppName=GWEN ▶ RePLAY™ PS5
 AppVersion=0.9.0
-AppPublisher=tenten1824
+AppPublisher=1010B3rika
 AppPublisherURL=https://github.com/Tenten1824/GWEN-RePLAY-PS5
 AppSupportURL=https://github.com/Tenten1824/GWEN-RePLAY-PS5/issues
-AppCopyright=Copyright (C) 2026 Tenten1824
+AppCopyright=Copyright (C) 2026 1010B3rika
 DefaultDirName={localappdata}\Programs\GWEN RePLAY PS5
 DefaultGroupName=GWEN ▶ RePLAY™ PS5
 PrivilegesRequired=lowest
@@ -36,3 +36,4 @@ Name: "{group}\GWEN ▶ RePLAY™ PS5"; Filename: "{app}\GWEN ▶ RePLAY™ PS5.
 Name: "{autodesktop}\GWEN ▶ RePLAY™ PS5"; Filename: "{app}\GWEN ▶ RePLAY™ PS5.exe"; Tasks: desktopicon
 [Run]
 Filename: "{app}\GWEN ▶ RePLAY™ PS5.exe"; Description: "Open GWEN ▶ RePLAY™ PS5"; Flags: nowait postinstall skipifsilent
+

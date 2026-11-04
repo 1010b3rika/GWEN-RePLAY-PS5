@@ -1,4 +1,4 @@
-GWEN ▶ RePLAY™ PS5 — v0.9.0 — developed by tenten1824
+GWEN ▶ RePLAY™ PS5 — v0.9.0 — developed by 1010B3rika
 
 1. Extract the ZIP, run GWEN-RePLAY-PS5-Setup.exe, and open GWEN from Start.
 2. Enter your PS5 IP. Keep its ELF loader and FTP running, with a game open.
@@ -44,3 +44,7 @@ Remote Play controller input and a multi-hour soak are not verified.
 
 Reuse and attribution: preserve the original author and license notices.
 See NOTICE.txt and CREDITS.txt. Portable EXE is developer-only, not public.
+
+
+
+Developer attribution refresh: **1010B3rika**. ELF and Windows launcher rebuilt for the name change only. Firmware worker files are unchanged; the renamed ELF has not been hardware-retested. Earlier functional verification applies to the original binary, retained in the saved restore point.

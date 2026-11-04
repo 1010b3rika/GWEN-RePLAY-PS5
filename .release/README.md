@@ -1,6 +1,6 @@
 # Release assembly
 
-Author and developer: tenten1824.
+Author and developer: 1010B3rika.
 
 The seed parts contain the audited runtime, precompiled hardware-verified ELF, Windows launcher, source archive and branding. seed.json verifies every part and the complete seed. The workflow retrieves dependency wheels from PyPI only when their SHA-256 matches the original audited wheel in wheels.json, verifies the Windows launcher points to the unchanged native ELF, and publishes version 0.9.0. No Sony firmware binaries or personal captures are included.
 
@@ -9,3 +9,4 @@ To inspect source locally, concatenate seed/part-*.bin in listed order, verify t
 Portable EXE binaries are developer-only and are not published.
 
 The public ZIP includes an Inno Setup installer and open source. CI verifies actual installation and uninstallation in an isolated runner-temp folder before publication.
+

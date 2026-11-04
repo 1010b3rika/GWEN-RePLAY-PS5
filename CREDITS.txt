@@ -1,8 +1,8 @@
 GWEN ▶ RePLAY™ PS5
 Version 0.9.0
 
-Author: tenten1824
-Developer: tenten1824
+Author: 1010B3rika
+Developer: 1010B3rika
 Project: https://github.com/Tenten1824/GWEN-RePLAY-PS5
 
 GWEN™ — Credits & acknowledgements
@@ -16,9 +16,9 @@ libraries are credited below.
 
 GWEN™ development
 
-Developed by Tenten1824 with development assistance from OpenAI Codex.
+Developed by 1010B3rika with development assistance from OpenAI Codex.
 Product direction, visual identity, custom interface and application
-integration: Tenten1824.
+integration: 1010B3rika.
 
 Supported PS5 firmware: 7.01, 10.01, 13.20 Pro and 13.60.
 Project source is provided under GPL-3.0-or-later; see LICENSE.
@@ -29,3 +29,4 @@ with their dependencies. Third-party components retain their respective
 licenses and credits in the bundled wheel distributions.
 
 No Sony firmware binaries, jailbreak or personal captures are distributed.
+
