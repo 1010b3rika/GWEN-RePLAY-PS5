@@ -1,8 +1,8 @@
-# GWEN â–¶ RePLAYâ„¢ PS5 v0.9.2
+# GWEN ▶ RePLAY™ PS5 v0.9.2
 
 **Author and developer: 1010B3rika**
 
-**GWEN â–¶ RePLAYâ„¢ PS5** is inspired by **GWENâ„¢ â€” Gaming World Entertainment Network**. GWENâ„¢ is an independent gaming and entertainment project inspired by Gwen. Developed by **1010B3rika** with development assistance from **OpenAI Codex**. Product direction, visual identity, custom interface and application integration: **1010B3rika**.
+**GWEN ▶ RePLAY™ PS5** is inspired by **GWEN™ — Gaming World Entertainment Network**. GWEN™ is an independent gaming and entertainment project inspired by Gwen. Developed by **1010B3rika** with development assistance from **OpenAI Codex**. Product direction, visual identity, custom interface and application integration: **1010B3rika**.
 
 Public installer fix: bundles an isolated CPython runtime and all dependencies. Fixes startup on PCs without Python or with the Microsoft Store Python alias. The app requires no separate Python setup. Startup is checked with system Python unavailable. This update does not change the ELF, capture bridge, shortcuts or firmware support.
 
@@ -31,4 +31,4 @@ The ZIP includes the installer and open source. Preserve original author attribu
 
 
 
-Developer attribution refresh: **1010B3rika**. ELF and Windows launcher rebuilt for the name change only. Firmware worker files are unchanged; the renamed ELF has not been hardware-retested. Earlier functional verification applies to the original binary, retained in the saved restore point.
+Developer attribution refresh: **1010B3rika**. The ELF was rebuilt for the earlier attribution change only; v0.9.2 updates the Windows installer and launcher. Firmware worker files are unchanged; the renamed ELF has not been hardware-retested. Earlier functional verification applies to the original binary, retained in the saved restore point.
