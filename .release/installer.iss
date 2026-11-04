@@ -6,14 +6,14 @@
 #endif
 [Setup]
 AppId={{AD52D0DE-F8C4-4E6D-8AD9-4CB8401DCB81}
-AppName=GWEN ▶ RePLAY™ PS5
-AppVersion=0.9.0
+AppName=GWEN â–¶ RePLAYâ„¢ PS5
+AppVersion=0.9.2
 AppPublisher=1010B3rika
-AppPublisherURL=https://github.com/Tenten1824/GWEN-RePLAY-PS5
-AppSupportURL=https://github.com/Tenten1824/GWEN-RePLAY-PS5/issues
+AppPublisherURL=https://github.com/1010b3rika/GWEN-RePLAY-PS5
+AppSupportURL=https://github.com/1010b3rika/GWEN-RePLAY-PS5/issues
 AppCopyright=Copyright (C) 2026 1010B3rika
 DefaultDirName={localappdata}\Programs\GWEN RePLAY PS5
-DefaultGroupName=GWEN ▶ RePLAY™ PS5
+DefaultGroupName=GWEN â–¶ RePLAYâ„¢ PS5
 PrivilegesRequired=lowest
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
@@ -21,7 +21,7 @@ MinVersion=10.0
 OutputDir={#DistDir}
 OutputBaseFilename=GWEN-RePLAY-PS5-Setup
 SetupIconFile={#PackageDir}\assets\gwen.ico
-UninstallDisplayIcon={app}\GWEN ▶ RePLAY™ PS5.exe
+UninstallDisplayIcon={app}\GWEN â–¶ RePLAYâ„¢ PS5.exe
 LicenseFile={#PackageDir}\LICENSE
 InfoBeforeFile={#PackageDir}\CREDITS.txt
 WizardStyle=modern
@@ -32,8 +32,8 @@ Name: desktopicon; Description: "Create a desktop shortcut"; Flags: unchecked
 [Files]
 Source: "{#PackageDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 [Icons]
-Name: "{group}\GWEN ▶ RePLAY™ PS5"; Filename: "{app}\GWEN ▶ RePLAY™ PS5.exe"
-Name: "{autodesktop}\GWEN ▶ RePLAY™ PS5"; Filename: "{app}\GWEN ▶ RePLAY™ PS5.exe"; Tasks: desktopicon
+Name: "{group}\GWEN â–¶ RePLAYâ„¢ PS5"; Filename: "{app}\GWEN â–¶ RePLAYâ„¢ PS5.exe"
+Name: "{autodesktop}\GWEN â–¶ RePLAYâ„¢ PS5"; Filename: "{app}\GWEN â–¶ RePLAYâ„¢ PS5.exe"; Tasks: desktopicon
 [Run]
-Filename: "{app}\GWEN ▶ RePLAY™ PS5.exe"; Description: "Open GWEN ▶ RePLAY™ PS5"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\GWEN â–¶ RePLAYâ„¢ PS5.exe"; Description: "Open GWEN â–¶ RePLAYâ„¢ PS5"; Flags: nowait postinstall skipifsilent
 

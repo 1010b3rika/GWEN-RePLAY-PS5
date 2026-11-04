@@ -9,7 +9,8 @@ AUTHOR='1010B3rika'
 OLD_ELF='3e290ba158f06f8048c312d6b3e2e415f2118ccb9c74de0decb2ccd1037539ea'
 TEXT={'.txt','.md','.json','.cs','.c','.h','.py','.ps1','.cmd','.bat','.html','.js','.css','.iss','.yml','.yaml'}
 def renamed(value):
-    return re.sub(r'(?i)tenten1824',lambda m:m.group() if re.search(r'https?://[^\s<>"\x27]*$',value[:m.start()]) else AUTHOR,value)
+    value=re.sub(r'(?i)https://github.com/tenten1824/', 'https://github.com/1010b3rika/',value)
+    return re.sub(r'(?i)tenten1824',AUTHOR,value)
 def refresh(package,repository):
     package=Path(package);repository=Path(repository)
     manifest=json.loads((repository/'release.json').read_text(encoding='utf-8'))

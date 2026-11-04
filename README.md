@@ -8,16 +8,18 @@ Native PS5 gameplay recording, screenshots and controller shortcuts, with a Wind
 
 | PS5 firmware | Support |
 | --- | --- |
-| 7.01 | Hardware verified |
-| 10.01 | Hardware verified |
-| 13.20 Pro | Hardware verified |
-| 13.60 | Hardware verified |
+| 7.01 | Original capture implementation hardware verified |
+| 10.01 | Original capture implementation hardware verified |
+| 13.20 Pro | Original capture implementation hardware verified |
+| 13.60 | Original capture implementation hardware verified |
 
 **One ELF supports these four versions.** Other firmware is rejected before capture integration. No support is claimed for 12.70 or other versions.
 
+**v0.9.2 fixes Windows startup on PCs without Python.** The installer includes its own runtime, dependencies and FFmpeg. Install, open GWEN and enter your console IP.
+
 ## Download
 
-Get the **full package ZIP** from [Releases](https://github.com/Tenten1824/GWEN-RePLAY-PS5/releases).
+Get the **full package ZIP** from [Releases](https://github.com/1010b3rika/GWEN-RePLAY-PS5/releases).
 
 - Full package: extract the ZIP and run **GWEN-RePLAY-PS5-Setup.exe**, then open **GWEN ▶ RePLAY™ PS5** from Start. The installer adds shortcuts and supports uninstalling through Windows Apps.
 - ELF only: **GWEN ▶ RePLAY™ PS5.elf** is the same firmware-detecting payload for all four supported versions. Use the PC package for automatic copying and audio export.
@@ -25,7 +27,7 @@ Get the **full package ZIP** from [Releases](https://github.com/Tenten1824/GWEN-
 
 ## Install and use
 
-You need a Windows PC with **Python 3.12 x64**, and a supported PS5 with a working **ELF loader on port 9021** and **FTP on port 2121**. Dependency and FFmpeg wheels are bundled; the Python interpreter and jailbreak are not included.
+You need a Windows 10/11 x64 PC, and a supported PS5 with a working **ELF loader on port 9021** and **FTP on port 2121**. Python, application dependencies and FFmpeg are bundled. No separate Python installation or command-line setup is needed. The jailbreak is not included.
 
 1. Start your PS5's loader and FTP, then open your game. Put the PC and PS5 on the same private network.
 2. Run the installer from the ZIP, open GWEN from Start, and enter **your PS5's IP address**.

@@ -3,7 +3,7 @@ Version 0.9.0
 
 Author: 1010B3rika
 Developer: 1010B3rika
-Project: https://github.com/Tenten1824/GWEN-RePLAY-PS5
+Project: https://github.com/1010b3rika/GWEN-RePLAY-PS5
 
 GWEN™ — Credits & acknowledgements
 

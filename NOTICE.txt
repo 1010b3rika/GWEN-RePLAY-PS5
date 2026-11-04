@@ -1,7 +1,7 @@
 GWEN ▶ RePLAY™ PS5
 Copyright (C) 2026 1010B3rika
 Original author and developer: 1010B3rika
-https://github.com/Tenten1824/GWEN-RePLAY-PS5
+https://github.com/1010b3rika/GWEN-RePLAY-PS5
 
 GWEN ▶ RePLAY™ PS5 is inspired by
 GWEN™ — Gaming World Entertainment Network.

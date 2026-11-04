@@ -1,4 +1,4 @@
-GWEN ▶ RePLAY™ PS5 — v0.9.0 — developed by 1010B3rika
+GWEN ▶ RePLAY™ PS5 — v0.9.2 — developed by 1010B3rika
 
 1. Extract the ZIP, run GWEN-RePLAY-PS5-Setup.exe, and open GWEN from Start.
 2. Enter your PS5 IP. Keep its ELF loader and FTP running, with a game open.
@@ -31,7 +31,7 @@ The 100 GiB quota uses this PC's existing disk space; it is not free online stor
 The library is shared across release folders through Windows local app-data,
 GWEN RePLAY PS5/Library. This PC's earlier libraries have been preserved.
 Use the Library tile to open the same service. No visible PowerShell window.
-Python 3.12 x64 is required; offline dependencies and FFmpeg wheels are included.
+Python, dependencies and FFmpeg are included in the installer. No separate Python installation is required.
 If setup fails, check CLOUD-START.log / CLOUD-SETUP.log.
 
 Payload Manager logo: Cloud/install_payload_icon.py installs the bundled combined

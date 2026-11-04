@@ -1,4 +1,4 @@
-"""Assemble and publish GWEN's audited v0.9.0 runtime. By 1010B3rika."""
+"""Assemble and publish GWEN's audited v0.9.2 runtime. By 1010B3rika."""
 import argparse,hashlib,json,os,shutil,subprocess,time,urllib.request,zipfile
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -11,7 +11,7 @@ for info in manifest['parts']:
     body=(w/'seed'/info['path']).read_bytes();assert len(body)==info['bytes'] and sha(body)==info['sha256'];parts.append(body)
 seed=b''.join(parts);assert len(seed)==manifest['bytes'] and sha(seed)==manifest['sha256']
 (out/'release-seed.zip').write_bytes(seed)
-package=out/'GWEN_RePLAY_v0.9.0_PS5_MultiFirmware';package.mkdir(exist_ok=True)
+package=out/'GWEN_RePLAY_v0.9.2_PS5_MultiFirmware';package.mkdir(exist_ok=True)
 with zipfile.ZipFile(out/'release-seed.zip') as z:
     for name in z.namelist():
         target=(package/name).resolve();assert target.is_relative_to(package.resolve())
@@ -50,6 +50,8 @@ def download(info):
                 time.sleep(2)
     assert sha(body)==info['sha256'],info['filename'];(wheels/info['filename']).write_bytes(body)
 with ThreadPoolExecutor(max_workers=6) as pool:list(pool.map(download,json.loads((w/'wheels.json').read_text())))
+spec=spec_from_file_location('gwen_runtime',w/'bundle-python.py');runtime=module_from_spec(spec);spec.loader.exec_module(runtime)
+runtime.assemble(package,w)
 for label,exe in [('regular',package/m['pc_launcher'])]:
     receipt=out/(label+'-check.json');subprocess.run([str(exe.resolve()),'--check',str(receipt.resolve())],check=True)
     checked=json.loads(receipt.read_text());assert checked['ok'] and checked['sha256']==json.loads((docs/'release.json').read_text(encoding='utf-8'))['files'][json.loads((docs/'release.json').read_text(encoding='utf-8'))['payload_file']]['sha256']
@@ -66,9 +68,10 @@ subprocess.run([str(setup.resolve()),'/VERYSILENT','/SUPPRESSMSGBOXES','/NORESTA
 assert sha((test/m['payload_file']).read_bytes())==json.loads((docs/'release.json').read_text(encoding='utf-8'))['files'][json.loads((docs/'release.json').read_text(encoding='utf-8'))['payload_file']]['sha256']
 check=out/'installed-check.json';subprocess.run([str((test/m['pc_launcher']).resolve()),'--check',str(check.resolve())],check=True)
 assert json.loads(check.read_text())['sha256']==json.loads((docs/'release.json').read_text(encoding='utf-8'))['files'][json.loads((docs/'release.json').read_text(encoding='utf-8'))['payload_file']]['sha256']
+subprocess.run([__import__('sys').executable,str(w/'check-installed.py'),str(test)],check=True,timeout=120)
 subprocess.run([str((test/'unins000.exe').resolve()),'/VERYSILENT','/SUPPRESSMSGBOXES','/NORESTART'],check=True,timeout=120)
 assert not (test/m['pc_launcher']).exists(),'Installer uninstall check failed'
-archive=dist/'GWEN_RePLAY_v0.9.0_PS5_MultiFirmware.zip'
+archive=dist/'GWEN_RePLAY_v0.9.2_PS5_MultiFirmware.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
     z.write(setup,Path(package.name)/setup.name)
     for name in ['Source.zip',m['payload_file'],'CREDITS.txt','NOTICE.txt','LICENSE','README.md','READ-ME-FIRST.txt','RELEASE-NOTES.md','GWEN-VERIFICATION.json']:
@@ -84,6 +87,9 @@ assert not any('portable' in f.name.lower() for f in files)
 print('Validated release assets:',', '.join(f.name for f in files),flush=True)
 if not a.no_publish:
     target=os.environ['GITHUB_SHA'];repo=os.environ['GITHUB_REPOSITORY']
-    assert repo=='Tenten1824/GWEN-RePLAY-PS5'
-    subprocess.run(['gh','release','upload','v0.9.0',*[str(f) for f in files],'--repo',repo,'--clobber'],check=True)
-    subprocess.run(['gh','release','edit','v0.9.0','--repo',repo,'--title','GWEN RePLAY PS5 v0.9.0 - 1010B3rika','--notes-file',str(package/'RELEASE-NOTES.md'),'--latest'],check=True)
+    assert repo.lower()=='1010b3rika/gwen-replay-ps5'
+    existing=subprocess.run(['gh','release','view','v0.9.2','--repo',repo],capture_output=True)
+    if existing.returncode:
+        subprocess.run(['gh','release','create','v0.9.2','--repo',repo,'--target',target,'--title','GWEN RePLAY PS5 v0.9.2 - 1010B3rika','--notes-file',str(package/'RELEASE-NOTES.md'),'--draft'],check=True)
+    subprocess.run(['gh','release','upload','v0.9.2',*[str(f) for f in files],'--repo',repo,'--clobber'],check=True)
+    subprocess.run(['gh','release','edit','v0.9.2','--repo',repo,'--title','GWEN RePLAY PS5 v0.9.2 - 1010B3rika','--notes-file',str(package/'RELEASE-NOTES.md'),'--latest','--draft=false'],check=True)

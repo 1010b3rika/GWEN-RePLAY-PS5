@@ -1,6 +1,6 @@
 {
   "product": "GWEN \u25b6 RePLAY\u2122 PS5",
-  "version": "0.9.0",
+  "version": "0.9.2",
   "firmware": "",
   "firmware_verified": [
     "7.01",
@@ -11,7 +11,7 @@
   "author": "1010B3rika",
   "developer": "1010B3rika",
   "stable": false,
-  "status": "Attribution-only rebuild; original firmware workers preserved; no hardware retest of renamed ELF",
+  "status": "Windows installer runtime fix; PS5 ELF unchanged from attribution rebuild; no new hardware retest",
   "payload_file": "GWEN \u25b6 RePLAY\u2122 PS5.elf",
   "pc_launcher": "GWEN \u25b6 RePLAY\u2122 PS5.exe",
   "loader_port": 9021,
@@ -31,10 +31,6 @@
     "honcho-stop.elf": {
       "bytes": 110280,
       "sha256": "480d8cc4a53960c3bb58bc16c9cbf7af2dc9eb66167d0f2bdac108ddffa9fca7"
-    },
-    "GWEN \u25b6 RePLAY\u2122 PS5.exe": {
-      "bytes": 201216,
-      "sha256": "25f9338a43cd67f769eb722debd1caf558ac7252ac753e7f876a09a8903375aa"
     }
   },
   "packaging_held": false,
@@ -44,5 +40,7 @@
   "long_duration_soak_test_performed": false,
   "distribution": "Public ZIP with installer and source; portable EXE is developer-only",
   "installer": "GWEN-RePLAY-PS5-Setup.exe",
-  "baseline_elf_sha256": "3e290ba158f06f8048c312d6b3e2e415f2118ccb9c74de0decb2ccd1037539ea"
+  "baseline_elf_sha256": "3e290ba158f06f8048c312d6b3e2e415f2118ccb9c74de0decb2ccd1037539ea",
+  "bundled_python": true,
+  "python_install_required": false
 }
